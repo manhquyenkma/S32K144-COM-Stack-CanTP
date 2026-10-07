@@ -1,4 +1,4 @@
-# S32K144 Mock COM Stack & ISO 15765-2 CanTP
+# S32K144 COM Stack & ISO 15765-2 CanTP
 
 ## NXP S32K144 Multi-ECU Distributed Network Project
 
@@ -11,7 +11,7 @@
 
 ## 1. Project Introduction
 
-This project implements an embedded automotive **Mock COM Stack (AUTOSAR-like architecture)** and **ISO 15765-2 Transport Protocol (CanTP)** on bare-metal NXP S32K144 microcontrollers.
+This project implements an embedded automotive **COM Stack (AUTOSAR-like architecture)** and **ISO 15765-2 Transport Protocol (CanTP)** on bare-metal NXP S32K144 microcontrollers.
 
 ### Key Capabilities:
 

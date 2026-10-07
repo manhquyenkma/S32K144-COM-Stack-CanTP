@@ -74,7 +74,7 @@ def send_image(ser, filepath, chunk_delay=0.05):
 
 def main():
     if len(sys.argv) < 3:
-        print("AUTOSAR Mock COM Stack — PC Image Sender for CanTp Demo")
+        print("S32K144 COM Stack — PC Image Sender for CanTp Demo")
         print()
         print("Usage:")
         print("  python image_sender.py <COM_PORT> <FILE | all>")

@@ -250,7 +250,7 @@ static int Stream_File(const char* filepath, const char* label, int printAscii) 
 
 int main(int argc, char* argv[]) {
     printf("======================================================================\n");
-    printf("   AUTOSAR Mock COM Stack - CanTp ASCII File Streaming Demo v0.7      \n");
+    printf("   S32K144 COM Stack - CanTp ASCII File Streaming Demo v0.7           \n");
     printf("======================================================================\n");
 
     int choice = 0;

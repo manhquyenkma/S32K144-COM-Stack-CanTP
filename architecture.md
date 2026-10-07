@@ -1,6 +1,6 @@
 # System Architecture Specification
-## AUTOSAR-Compliant Mock COM Stack & ISO 15765-2 CanTP
-**Project:** Mock Communication Stack on NXP S32K144  
+## AUTOSAR-like COM Stack & ISO 15765-2 CanTP
+**Project:** Communication Stack on NXP S32K144  
 **Author:** QUYENNM8  
 **Target:** 3 ECUs (1 Master + 2 Slaves) on CAN Bus 500 kbps  
 

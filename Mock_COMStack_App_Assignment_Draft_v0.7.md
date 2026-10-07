@@ -1,9 +1,9 @@
-# Mock COM Stack – Application Assignment
+# COM Stack – Application Assignment
 ## Draft v0.7
 
 > **Target:** 3 ECUs — 1 Master + 2 Slaves  
 > **Main features:** KeepAlive + ADC, Slave Status, ASCII Image Transfer  
-> **Goal:** Keep the Application Layer simple and use it mainly to demonstrate the Mock COM Stack.
+> **Goal:** Keep the Application Layer simple and use it mainly to demonstrate the COM Stack.
 
 ---
 

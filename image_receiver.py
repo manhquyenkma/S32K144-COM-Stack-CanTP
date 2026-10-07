@@ -23,7 +23,7 @@ except ImportError:
 
 def main():
     if len(sys.argv) < 2:
-        print("AUTOSAR Mock COM Stack — PC Image Receiver")
+        print("S32K144 COM Stack — PC Image Receiver")
         print()
         print("Usage:")
         print("  python image_receiver.py <COM_PORT> [OUTPUT_FILE]")
@@ -37,7 +37,7 @@ def main():
     outfile = sys.argv[2] if len(sys.argv) > 2 else None
 
     print(f"======================================================================")
-    print(f"   AUTOSAR Mock COM Stack — Slave ASCII Image Receiver                ")
+    print(f"   S32K144 COM Stack — Slave ASCII Image Receiver                     ")
     print(f"======================================================================")
     print(f"[PC] Opening {port} at 115200 8N1...")
 

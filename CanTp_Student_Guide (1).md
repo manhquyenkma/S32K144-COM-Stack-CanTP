@@ -1,9 +1,9 @@
-# MOCK CanTp — Hướng dẫn triển khai đầy đủ (Phase 1–3)
+# CanTp — Hướng dẫn triển khai đầy đủ (Phase 1–3)
 
-**Phiên bản:** Student Implementation Guide v2.0 · **Đối tượng:** nhóm đã hoàn thành mock COM/PduR/CanIf/CanDrv Part 1 · **Trạng thái:** tài liệu giao bài tổng hợp theo Architecture Baseline v1.0 đã duyệt.  
+**Phiên bản:** Student Implementation Guide v2.0 · **Đối tượng:** nhóm đã hoàn thành COM/PduR/CanIf/CanDrv Part 1 · **Trạng thái:** tài liệu giao bài tổng hợp theo Architecture Baseline v1.0 đã duyệt.  
 **Cách sử dụng:** đọc mục 1–7 trước khi code, triển khai theo mục 8 (Phase 1) → mục 9 (Phase 2) → mục 10 (Phase 3), nghiệm thu theo mục 11. **Chỉ có ba phase, không có Phase 4 trong phạm vi bài này.**
 
-> Đây là **mock dành cho đào tạo**, mô phỏng những nguyên lý của CAN transport, không phải thư viện ISO-TP/AUTOSAR production-ready. Những đoạn C là *pseudo-C/khung interface* cần điều chỉnh với `Std_Types.h`, `PduInfoType`, quy ước ID và driver Part 1 đã có; không được coi là source code có thể build nguyên xi.
+> Đây là **tài liệu dành cho đào tạo**, mô phỏng những nguyên lý của CAN transport, không phải thư viện ISO-TP/AUTOSAR production-ready. Những đoạn C là *pseudo-C/khung interface* cần điều chỉnh với `Std_Types.h`, `PduInfoType`, quy ước ID và driver Part 1 đã có; không được coi là source code có thể build nguyên xi.
 
 ## 0. Bức tranh tổng thể: ba phase, một sản phẩm
 

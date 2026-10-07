@@ -1,6 +1,6 @@
 # AUTOSAR Mock COM Stack & ISO 15765-2 CanTP - Toàn bộ Mã nguồn Dự án (ALL CODE)
 
-> **Ngày tạo:** 2026-10-05 03:23:57
+> **Ngày tạo:** 2026-10-07 02:54:38
 > **Dự án:** Embedded Automotive AUTOSAR Communication Stack & ISO 15765-2 Transport Protocol
 > **Nền tảng:** NXP S32K144 EVB-Q100 (ARM Cortex-M4F) | IDE: S32 Design Studio v3.4 (GCC 9.2)
 > **Mạng truyền thông:** CAN Classic 500 kbps (SOSC 8 MHz crystal) | Transceiver: UJA1169 (12V)
@@ -13,7 +13,7 @@
 
 ### 1. Tài liệu Kiến trúc & Hướng dẫn Hệ thống
 
-- [README.md](#readmemd) *(202 dòng | 9.2 KB)*: Tài liệu tổng quan hệ thống, hướng dẫn đấu nối phần cứng 2x EVB S32K144, phân vai Master/Slave và các bước vận hành
+- [README.md](#readmemd) *(200 dòng | 9.2 KB)*: Tài liệu tổng quan hệ thống, hướng dẫn đấu nối phần cứng 2x EVB S32K144, phân vai Master/Slave và các bước vận hành
 - [architecture.md](#architecturemd) *(338 dòng | 19.7 KB)*: Đặc tả kiến trúc phân tầng AUTOSAR COM Stack, sơ đồ luồng dữ liệu, sequence diagram và phân bổ Mailbox FlexCAN
 - [deliverables_part1.md](#deliverablespart1md) *(610 dòng | 20.2 KB)*: Báo cáo nghiệm thu Part 1: COM Signal, Deadline Monitoring và chuyển đổi trạng thái
 - [part1_architecture_notes.md](#part1architecturenotesmd) *(880 dòng | 15.9 KB)*: Ghi chú kỹ thuật chi tiết về thiết kế tín hiệu CAN, byte ordering (Little/Big Endian) và unpacking/packing logic
@@ -119,7 +119,7 @@
 ## 📊 Thống kê Tổng quan Mã nguồn
 
 - **Tổng số tập tin được tổng hợp:** 64 files
-- **Tổng số dòng mã nguồn (LOC):** 13,794 dòng
+- **Tổng số dòng mã nguồn (LOC):** 13,792 dòng
 - **Tỉ lệ bao phủ kiểm thử (Test Coverage):** 100% (25/25 test cases passed)
 - **Hỗ trợ biên dịch:** GCC Host Runner (MinGW x86_64) & S32DS Target Cross-Compiler (arm-none-eabi-gcc)
 
@@ -132,25 +132,23 @@
 
 **Chức năng / Mô tả:** Tài liệu tổng quan hệ thống, hướng dẫn đấu nối phần cứng 2x EVB S32K144, phân vai Master/Slave và các bước vận hành  
 **Đường dẫn tương đối:** `README.md`  
-**Kích thước:** 9,400 bytes (9.2 KB) | **Số dòng:** 202 dòng
+**Kích thước:** 9,394 bytes (9.2 KB) | **Số dòng:** 200 dòng
 
 ```markdown
-FHJJJJJ  
-
-# AUTOSAR Mock COM Stack & ISO 15765-2 CanTP
+# S32K144 COM Stack & ISO 15765-2 CanTP
 
 ## NXP S32K144 Multi-ECU Distributed Network Project
 
-**Author:** QUYENNM8
-**Platform:** NXP S32K144 EVB-Q100 (ARM Cortex-M4F)
-**IDE & Toolchain:** S32 Design Studio for ARM v3.4 / GCC 9.2 (arm-none-eabi)
-**Communication Bus:** CAN Classic 500 kbps (SOSC 8 MHz external crystal)
+**Author:** QUYENNM8  
+**Platform:** NXP S32K144 EVB-Q100 (ARM Cortex-M4F)  
+**IDE & Toolchain:** S32 Design Studio for ARM v3.4 / GCC 9.2 (arm-none-eabi)  
+**Communication Bus:** CAN Classic 500 kbps (SOSC 8 MHz external crystal)  
 
 ---
 
 ## 1. Project Introduction
 
-This project implements an embedded automotive **AUTOSAR Communication Stack (COM Stack)** and **ISO 15765-2 Transport Protocol (CanTP)** on bare-metal S32K144 microcontrollers.
+This project implements an embedded automotive **COM Stack (AUTOSAR-like architecture)** and **ISO 15765-2 Transport Protocol (CanTP)** on bare-metal NXP S32K144 microcontrollers.
 
 ### Key Capabilities:
 
@@ -346,12 +344,12 @@ For exhaustive architectural design notes, sequence diagrams, timing budgets, an
 
 **Chức năng / Mô tả:** Đặc tả kiến trúc phân tầng AUTOSAR COM Stack, sơ đồ luồng dữ liệu, sequence diagram và phân bổ Mailbox FlexCAN  
 **Đường dẫn tương đối:** `architecture.md`  
-**Kích thước:** 20,137 bytes (19.7 KB) | **Số dòng:** 338 dòng
+**Kích thước:** 20,122 bytes (19.7 KB) | **Số dòng:** 338 dòng
 
 ```markdown
 # System Architecture Specification
-## AUTOSAR-Compliant Mock COM Stack & ISO 15765-2 CanTP
-**Project:** Mock Communication Stack on NXP S32K144  
+## AUTOSAR-like COM Stack & ISO 15765-2 CanTP
+**Project:** Communication Stack on NXP S32K144  
 **Author:** QUYENNM8  
 **Target:** 3 ECUs (1 Master + 2 Slaves) on CAN Bus 500 kbps  
 
@@ -7506,7 +7504,7 @@ static int Stream_File(const char* filepath, const char* label, int printAscii) 
 
 int main(int argc, char* argv[]) {
     printf("======================================================================\n");
-    printf("   AUTOSAR Mock COM Stack - CanTp ASCII File Streaming Demo v0.7      \n");
+    printf("   S32K144 COM Stack - CanTp ASCII File Streaming Demo v0.7           \n");
     printf("======================================================================\n");
 
     int choice = 0;
@@ -8769,7 +8767,7 @@ void Test_Integration_Run(void) {
 
 **Chức năng / Mô tả:** Công cụ PC gửi file ảnh ASCII qua cổng COM Master ECU với tốc độ cao, hỗ trợ chia gói và thanh tiến trình  
 **Đường dẫn tương đối:** `image_sender.py`  
-**Kích thước:** 4,193 bytes (4.1 KB) | **Số dòng:** 133 dòng
+**Kích thước:** 4,188 bytes (4.1 KB) | **Số dòng:** 133 dòng
 
 ```python
 #!/usr/bin/env python3
@@ -8848,7 +8846,7 @@ def send_image(ser, filepath, chunk_delay=0.05):
 
 def main():
     if len(sys.argv) < 3:
-        print("AUTOSAR Mock COM Stack — PC Image Sender for CanTp Demo")
+        print("S32K144 COM Stack — PC Image Sender for CanTp Demo")
         print()
         print("Usage:")
         print("  python image_sender.py <COM_PORT> <FILE | all>")
@@ -8914,7 +8912,7 @@ if __name__ == "__main__":
 
 **Chức năng / Mô tả:** Công cụ PC nhận và hiển thị ảnh ASCII thời gian thực từ Slave ECU qua cổng UART OpenSDA  
 **Đường dẫn tương đối:** `image_receiver.py`  
-**Kích thước:** 3,440 bytes (3.4 KB) | **Số dòng:** 98 dòng
+**Kích thước:** 3,435 bytes (3.4 KB) | **Số dòng:** 98 dòng
 
 ```python
 #!/usr/bin/env python3
@@ -8942,7 +8940,7 @@ except ImportError:
 
 def main():
     if len(sys.argv) < 2:
-        print("AUTOSAR Mock COM Stack — PC Image Receiver")
+        print("S32K144 COM Stack — PC Image Receiver")
         print()
         print("Usage:")
         print("  python image_receiver.py <COM_PORT> [OUTPUT_FILE]")
@@ -8956,7 +8954,7 @@ def main():
     outfile = sys.argv[2] if len(sys.argv) > 2 else None
 
     print(f"======================================================================")
-    print(f"   AUTOSAR Mock COM Stack — Slave ASCII Image Receiver                ")
+    print(f"   S32K144 COM Stack — Slave ASCII Image Receiver                     ")
     print(f"======================================================================")
     print(f"[PC] Opening {port} at 115200 8N1...")
 
@@ -9024,12 +9022,12 @@ if __name__ == '__main__':
 
 **Chức năng / Mô tả:** Script PC benchmark tốc độ truyền luồng ký tự liên tục qua CanTp  
 **Đường dẫn tương đối:** `demo_stream.py`  
-**Kích thước:** 1,878 bytes (1.8 KB) | **Số dòng:** 54 dòng
+**Kích thước:** 1,863 bytes (1.8 KB) | **Số dòng:** 54 dòng
 
 ```python
 #!/usr/bin/env python3
 """
-AUTOSAR Mock COM Stack - CanTp ASCII Image Transfer Demo
+S32K144 COM Stack - CanTp ASCII Image Transfer Demo
 Stream 4 ASCII files via CanTp and verify 100% data integrity.
 """
 
@@ -9047,7 +9045,7 @@ FILES = [
 
 def print_banner():
     print("=" * 72)
-    print("  AUTOSAR Mock COM Stack v0.7 - CanTp ASCII File Streaming Demo")
+    print("  S32K144 COM Stack - CanTp ASCII File Streaming Demo")
     print("  Mentored Wire Format: SF(6B max), FF(6B payload), CF(7B payload), FC(CTS/BS=4/STmin=5ms)")
     print("=" * 72)
 
@@ -11359,15 +11357,15 @@ extern "C" {
 
 **Chức năng / Mô tả:** Đề bài chi tiết đồ án Mock COM Stack: yêu cầu tính năng, tiêu chuẩn đánh giá và kịch bản demo  
 **Đường dẫn tương đối:** `Mock_COMStack_App_Assignment_Draft_v0.7.md`  
-**Kích thước:** 13,731 bytes (13.4 KB) | **Số dòng:** 706 dòng
+**Kích thước:** 13,721 bytes (13.4 KB) | **Số dòng:** 706 dòng
 
 ```markdown
-# Mock COM Stack – Application Assignment
+# COM Stack – Application Assignment
 ## Draft v0.7
 
 > **Target:** 3 ECUs — 1 Master + 2 Slaves  
 > **Main features:** KeepAlive + ADC, Slave Status, ASCII Image Transfer  
-> **Goal:** Keep the Application Layer simple and use it mainly to demonstrate the Mock COM Stack.
+> **Goal:** Keep the Application Layer simple and use it mainly to demonstrate the COM Stack.
 
 ---
 
@@ -13652,15 +13650,15 @@ NO SCHEDULE DRIFT
 
 **Chức năng / Mô tả:** Cẩm nang hướng dẫn chuyên sâu ISO 15765-2 CanTp: SF, FF, CF, FC, timeouts N_As, N_Bs, N_Cr và STmin  
 **Đường dẫn tương đối:** `CanTp_Student_Guide (1).md`  
-**Kích thước:** 62,047 bytes (60.6 KB) | **Số dòng:** 1,047 dòng
+**Kích thước:** 62,044 bytes (60.6 KB) | **Số dòng:** 1,047 dòng
 
 ```markdown
-# MOCK CanTp — Hướng dẫn triển khai đầy đủ (Phase 1–3)
+# CanTp — Hướng dẫn triển khai đầy đủ (Phase 1–3)
 
-**Phiên bản:** Student Implementation Guide v2.0 · **Đối tượng:** nhóm đã hoàn thành mock COM/PduR/CanIf/CanDrv Part 1 · **Trạng thái:** tài liệu giao bài tổng hợp theo Architecture Baseline v1.0 đã duyệt.  
+**Phiên bản:** Student Implementation Guide v2.0 · **Đối tượng:** nhóm đã hoàn thành COM/PduR/CanIf/CanDrv Part 1 · **Trạng thái:** tài liệu giao bài tổng hợp theo Architecture Baseline v1.0 đã duyệt.  
 **Cách sử dụng:** đọc mục 1–7 trước khi code, triển khai theo mục 8 (Phase 1) → mục 9 (Phase 2) → mục 10 (Phase 3), nghiệm thu theo mục 11. **Chỉ có ba phase, không có Phase 4 trong phạm vi bài này.**
 
-> Đây là **mock dành cho đào tạo**, mô phỏng những nguyên lý của CAN transport, không phải thư viện ISO-TP/AUTOSAR production-ready. Những đoạn C là *pseudo-C/khung interface* cần điều chỉnh với `Std_Types.h`, `PduInfoType`, quy ước ID và driver Part 1 đã có; không được coi là source code có thể build nguyên xi.
+> Đây là **tài liệu dành cho đào tạo**, mô phỏng những nguyên lý của CAN transport, không phải thư viện ISO-TP/AUTOSAR production-ready. Những đoạn C là *pseudo-C/khung interface* cần điều chỉnh với `Std_Types.h`, `PduInfoType`, quy ước ID và driver Part 1 đã có; không được coi là source code có thể build nguyên xi.
 
 ## 0. Bức tranh tổng thể: ba phase, một sản phẩm
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AUTOSAR Mock COM Stack - CanTp ASCII Image Transfer Demo
+S32K144 COM Stack - CanTp ASCII Image Transfer Demo
 Stream 4 ASCII files via CanTp and verify 100% data integrity.
 """
 
@@ -18,7 +18,7 @@ FILES = [
 
 def print_banner():
     print("=" * 72)
-    print("  AUTOSAR Mock COM Stack v0.7 - CanTp ASCII File Streaming Demo")
+    print("  S32K144 COM Stack - CanTp ASCII File Streaming Demo")
     print("  Mentored Wire Format: SF(6B max), FF(6B payload), CF(7B payload), FC(CTS/BS=4/STmin=5ms)")
     print("=" * 72)
 
