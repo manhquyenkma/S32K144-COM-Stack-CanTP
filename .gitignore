@@ -1,0 +1,35 @@
+# S32 Design Studio / Eclipse CDT build outputs
+Debug_FLASH/
+Release_FLASH/
+Debug/
+Release/
+
+# Compiled objects and binaries
+*.o
+*.obj
+*.d
+*.elf
+*.bin
+*.hex
+*.srec
+*.map
+*.a
+*.lib
+
+# Temporary / OS files
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*~
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code user settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
