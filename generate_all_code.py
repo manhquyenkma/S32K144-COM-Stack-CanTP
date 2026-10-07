@@ -3,7 +3,7 @@
 """
 =============================================================================
 Script: generate_all_code.py
-Dự án: AUTOSAR Mock COM Stack & ISO 15765-2 CanTP (NXP S32K144)
+Dự án: S32K144 COM Stack & ISO 15765-2 CanTP (NXP S32K144)
 Mục đích: Tự động gom toàn bộ 100% mã nguồn, header, cấu hình, linker scripts,
           tài liệu kiến trúc, bộ unit test và công cụ PC thành 1 file duy nhất:
           ALL_CODE.md
@@ -137,7 +137,7 @@ FILES_CONFIG = [
 
     # Nhóm 13: Đặc tả Yêu cầu & Cẩm nang Hướng dẫn Đồ án (Specifications & Guides)
     ("13. Đặc tả Yêu cầu & Cẩm nang Hướng dẫn Đồ án", [
-        ("Mock_COMStack_App_Assignment_Draft_v0.7.md", "markdown", "Đề bài chi tiết đồ án Mock COM Stack: yêu cầu tính năng, tiêu chuẩn đánh giá và kịch bản demo"),
+        ("Mock_COMStack_App_Assignment_Draft_v0.7.md", "markdown", "Đề bài chi tiết đồ án COM Stack: yêu cầu tính năng, tiêu chuẩn đánh giá và kịch bản demo"),
         ("assignment_part1_com_signal.md", "markdown", "Bản đặc tả tín hiệu CAN, byte ordering (Little/Big Endian) và kiểm tra tín hiệu AUTOSAR COM"),
         ("CanTp_Student_Guide (1).md", "markdown", "Cẩm nang hướng dẫn chuyên sâu ISO 15765-2 CanTp: SF, FF, CF, FC, timeouts N_As, N_Bs, N_Cr và STmin"),
     ]),
@@ -145,10 +145,10 @@ FILES_CONFIG = [
 
 def generate():
     lines = []
-    lines.append("# AUTOSAR Mock COM Stack & ISO 15765-2 CanTP - Toàn bộ Mã nguồn Dự án (ALL CODE)")
+    lines.append("# S32K144 COM Stack & ISO 15765-2 CanTP - Toàn bộ Mã nguồn Dự án (ALL CODE)")
     lines.append("")
     lines.append("> **Ngày tạo:** " + datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-    lines.append("> **Dự án:** Embedded Automotive AUTOSAR Communication Stack & ISO 15765-2 Transport Protocol")
+    lines.append("> **Dự án:** Embedded Automotive COM Stack (AUTOSAR-like) & ISO 15765-2 Transport Protocol")
     lines.append("> **Nền tảng:** NXP S32K144 EVB-Q100 (ARM Cortex-M4F) | IDE: S32 Design Studio v3.4 (GCC 9.2)")
     lines.append("> **Mạng truyền thông:** CAN Classic 500 kbps (SOSC 8 MHz crystal) | Transceiver: UJA1169 (12V)")
     lines.append("> **Tiêu chuẩn tuân thủ:** AUTOSAR Classic BSW Architecture, ISO 15765-2 CanTP, MISRA C Guidelines")

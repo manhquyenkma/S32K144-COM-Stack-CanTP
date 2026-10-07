@@ -1,7 +1,7 @@
-# AUTOSAR Mock COM Stack & ISO 15765-2 CanTP - Toàn bộ Mã nguồn Dự án (ALL CODE)
+# S32K144 COM Stack & ISO 15765-2 CanTP - Toàn bộ Mã nguồn Dự án (ALL CODE)
 
-> **Ngày tạo:** 2026-10-07 02:54:38
-> **Dự án:** Embedded Automotive AUTOSAR Communication Stack & ISO 15765-2 Transport Protocol
+> **Ngày tạo:** 2026-10-07 03:01:34
+> **Dự án:** Embedded Automotive COM Stack (AUTOSAR-like) & ISO 15765-2 Transport Protocol
 > **Nền tảng:** NXP S32K144 EVB-Q100 (ARM Cortex-M4F) | IDE: S32 Design Studio v3.4 (GCC 9.2)
 > **Mạng truyền thông:** CAN Classic 500 kbps (SOSC 8 MHz crystal) | Transceiver: UJA1169 (12V)
 > **Tiêu chuẩn tuân thủ:** AUTOSAR Classic BSW Architecture, ISO 15765-2 CanTP, MISRA C Guidelines
@@ -110,7 +110,7 @@
 
 ### 13. Đặc tả Yêu cầu & Cẩm nang Hướng dẫn Đồ án
 
-- [Mock_COMStack_App_Assignment_Draft_v0.7.md](#mockcomstackappassignmentdraftv07md) *(706 dòng | 13.4 KB)*: Đề bài chi tiết đồ án Mock COM Stack: yêu cầu tính năng, tiêu chuẩn đánh giá và kịch bản demo
+- [Mock_COMStack_App_Assignment_Draft_v0.7.md](#mockcomstackappassignmentdraftv07md) *(706 dòng | 13.4 KB)*: Đề bài chi tiết đồ án COM Stack: yêu cầu tính năng, tiêu chuẩn đánh giá và kịch bản demo
 - [assignment_part1_com_signal.md](#assignmentpart1comsignalmd) *(1563 dòng | 31.8 KB)*: Bản đặc tả tín hiệu CAN, byte ordering (Little/Big Endian) và kiểm tra tín hiệu AUTOSAR COM
 - [CanTp_Student_Guide (1).md](#cantpstudentguide(1)md) *(1047 dòng | 60.6 KB)*: Cẩm nang hướng dẫn chuyên sâu ISO 15765-2 CanTp: SF, FF, CF, FC, timeouts N_As, N_Bs, N_Cr và STmin
 
@@ -11355,7 +11355,7 @@ extern "C" {
 <a id="mockcomstackappassignmentdraftv07md"></a>
 ## 📄 File: `Mock_COMStack_App_Assignment_Draft_v0.7.md`
 
-**Chức năng / Mô tả:** Đề bài chi tiết đồ án Mock COM Stack: yêu cầu tính năng, tiêu chuẩn đánh giá và kịch bản demo  
+**Chức năng / Mô tả:** Đề bài chi tiết đồ án COM Stack: yêu cầu tính năng, tiêu chuẩn đánh giá và kịch bản demo  
 **Đường dẫn tương đối:** `Mock_COMStack_App_Assignment_Draft_v0.7.md`  
 **Kích thước:** 13,721 bytes (13.4 KB) | **Số dòng:** 706 dòng
 
