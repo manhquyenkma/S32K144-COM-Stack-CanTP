@@ -1,17 +1,17 @@
-# AUTOSAR Mock COM Stack & ISO 15765-2 CanTP
+# S32K144 Mock COM Stack & ISO 15765-2 CanTP
 
 ## NXP S32K144 Multi-ECU Distributed Network Project
 
-**Author:** QUYENNM8
-**Platform:** NXP S32K144 EVB-Q100 (ARM Cortex-M4F)
-**IDE & Toolchain:** S32 Design Studio for ARM v3.4 / GCC 9.2 (arm-none-eabi)
-**Communication Bus:** CAN Classic 500 kbps (SOSC 8 MHz external crystal)
+**Author:** QUYENNM8  
+**Platform:** NXP S32K144 EVB-Q100 (ARM Cortex-M4F)  
+**IDE & Toolchain:** S32 Design Studio for ARM v3.4 / GCC 9.2 (arm-none-eabi)  
+**Communication Bus:** CAN Classic 500 kbps (SOSC 8 MHz external crystal)  
 
 ---
 
 ## 1. Project Introduction
 
-This project implements an embedded automotive **AUTOSAR Communication Stack (COM Stack)** and **ISO 15765-2 Transport Protocol (CanTP)** on bare-metal S32K144 microcontrollers.
+This project implements an embedded automotive **Mock COM Stack (AUTOSAR-like architecture)** and **ISO 15765-2 Transport Protocol (CanTP)** on bare-metal NXP S32K144 microcontrollers.
 
 ### Key Capabilities:
 
